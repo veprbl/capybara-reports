@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ePIC capybara report</title>
+    <style>
+      html, body {
+        box-sizing: border-box;
+        display: flow-root;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-3.2.2.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.2.2.min.js"></script>
+    <script type="text/javascript">
+        Bokeh.set_log_level("info");
+    </script>
+  </head>
+  <body>
+    <div id="f3e2b8d1-1559-4f1f-a104-fa23e7ef62bb" data-root-id="p7537" style="display: contents;"></div>
+  
+    <script type="application/json" id="p7539">
+      {"956bb501-827f-41f3-bb33-df7490304d9f":{"version":"3.2.2","title":"Bokeh Application","roots":[{"type":"object","name":"Dropdown","id":"p7537","attributes":{"button_type":"primary","js_event_callbacks":{"type":"map","entries":[["menu_item_click",[{"type":"object","name":"CustomJS","id":"p7538","attributes":{"code":"\n          console.log('dropdown: ' + this.item, this.toString())\n          fetch(this.item + '.json')\n            .then(function(response) { return response.json(); })\n            .then(function(item) { Bokeh.documents[0].replace_with_json(item.doc); })\n        "}}]]]},"width":350,"label":"Select branch","menu":[null,["GeneratedChargedJets#4","GeneratedChargedJets__pound__4"],["GeneratedChargedJets#5","GeneratedChargedJets__pound__5"],["GeneratedChargedJets","GeneratedChargedJets"],["GeneratedJets#4","GeneratedJets__pound__4"],["GeneratedJets#5","GeneratedJets__pound__5"],["GeneratedJets","GeneratedJets"],["ReconstructedChargedJets#4","ReconstructedChargedJets__pound__4"],["ReconstructedChargedJets#5","ReconstructedChargedJets__pound__5"],["ReconstructedChargedJets","ReconstructedChargedJets"],["ReconstructedJets#4","ReconstructedJets__pound__4"],["ReconstructedJets#5","ReconstructedJets__pound__5"],["ReconstructedJets","ReconstructedJets"]]}}]}}
+    </script>
+    <script type="text/javascript">
+      (function() {
+        const fn = function() {
+          Bokeh.safely(function() {
+            (function(root) {
+              function embed_document(root) {
+              const docs_json = document.getElementById('p7539').textContent;
+              const render_items = [{"docid":"956bb501-827f-41f3-bb33-df7490304d9f","roots":{"p7537":"f3e2b8d1-1559-4f1f-a104-fa23e7ef62bb"},"root_ids":["p7537"]}];
+              root.Bokeh.embed.embed_items(docs_json, render_items);
+              }
+              if (root.Bokeh !== undefined) {
+                embed_document(root);
+              } else {
+                let attempts = 0;
+                const timer = setInterval(function(root) {
+                  if (root.Bokeh !== undefined) {
+                    clearInterval(timer);
+                    embed_document(root);
+                  } else {
+                    attempts++;
+                    if (attempts > 100) {
+                      clearInterval(timer);
+                      console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                    }
+                  }
+                }, 10, root)
+              }
+            })(window);
+          });
+        };
+        if (document.readyState != "loading") fn();
+        else document.addEventListener("DOMContentLoaded", fn);
+      })();
+    </script>
+  </body>
+</html>
