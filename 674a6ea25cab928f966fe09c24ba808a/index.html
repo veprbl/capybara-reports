@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ePIC capybara report</title>
+    <style>
+      html, body {
+        box-sizing: border-box;
+        display: flow-root;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-3.2.2.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.2.2.min.js"></script>
+    <script type="text/javascript">
+        Bokeh.set_log_level("info");
+    </script>
+  </head>
+  <body>
+    <div id="e8bcd416-a882-4dc9-9770-fc7e88b07135" data-root-id="p61166" style="display: contents;"></div>
+  
+    <script type="application/json" id="p61168">
+      {"709b11d0-a063-42fd-9af7-970a1deb3df3":{"version":"3.2.2","title":"Bokeh Application","roots":[{"type":"object","name":"Dropdown","id":"p61166","attributes":{"button_type":"primary","js_event_callbacks":{"type":"map","entries":[["menu_item_click",[{"type":"object","name":"CustomJS","id":"p61167","attributes":{"code":"\n          console.log('dropdown: ' + this.item, this.toString())\n          window.location.hash = \"#\" + this.item;\n          fetch(this.item + '.json')\n            .then(function(response) { return response.json(); })\n            .then(function(item) { Bokeh.documents[0].replace_with_json(item.doc); })\n        "}}]]]},"width":350,"label":"Select branch","menu":[["CentralCKFSeededTrackParameters#0 (*)","CentralCKFSeededTrackParameters__pound__0"],["CentralCKFSeededTrackParameters (*)","CentralCKFSeededTrackParameters"],["CentralCKFSeededTrajectories#0 (*)","CentralCKFSeededTrajectories__pound__0"],["CentralCKFSeededTrajectories (*)","CentralCKFSeededTrajectories"],["CentralCKFTrackParameters#0 (*)","CentralCKFTrackParameters__pound__0"],["CentralCKFTrackParameters (*)","CentralCKFTrackParameters"],["CentralCKFTrajectories#0 (*)","CentralCKFTrajectories__pound__0"],["CentralCKFTrajectories (*)","CentralCKFTrajectories"],["CentralTrackSeedingResults#0 (*)","CentralTrackSeedingResults__pound__0"],["CentralTrackSeedingResults (*)","CentralTrackSeedingResults"],["CentralTrackSegments (*)","CentralTrackSegments"],["CentralTrackSegments_0 (*)","CentralTrackSegments_0"],["CentralTrackVertices#0 (*)","CentralTrackVertices__pound__0"],["CentralTrackVertices (*)","CentralTrackVertices"],["ReconstructedChargedJets#4 (*)","ReconstructedChargedJets__pound__4"],["ReconstructedChargedJets#5 (*)","ReconstructedChargedJets__pound__5"],["ReconstructedChargedJets (*)","ReconstructedChargedJets"],["ReconstructedChargedParticles#4 (*)","ReconstructedChargedParticles__pound__4"],["ReconstructedChargedParticles#5 (*)","ReconstructedChargedParticles__pound__5"],["ReconstructedChargedParticles (*)","ReconstructedChargedParticles"],["ReconstructedElectrons#4 (*)","ReconstructedElectrons__pound__4"],["ReconstructedElectrons#5 (*)","ReconstructedElectrons__pound__5"],["ReconstructedElectrons (*)","ReconstructedElectrons"],["ReconstructedJets#4 (*)","ReconstructedJets__pound__4"],["ReconstructedJets#5 (*)","ReconstructedJets__pound__5"],["ReconstructedJets (*)","ReconstructedJets"],["ReconstructedParticleAssociations#0 (*)","ReconstructedParticleAssociations__pound__0"],["ReconstructedParticleAssociations (*)","ReconstructedParticleAssociations"],["ReconstructedParticles#4 (*)","ReconstructedParticles__pound__4"],["ReconstructedParticles#5 (*)","ReconstructedParticles__pound__5"],["ReconstructedParticles (*)","ReconstructedParticles"],["ReconstructedSeededChargedParticleAssociations#0 (*)","ReconstructedSeededChargedParticleAssociations__pound__0"],["ReconstructedSeededChargedParticleAssociations#1 (*)","ReconstructedSeededChargedParticleAssociations__pound__1"],["ReconstructedSeededChargedParticleAssociations (*)","ReconstructedSeededChargedParticleAssociations"],["ReconstructedSeededChargedParticles#4 (*)","ReconstructedSeededChargedParticles__pound__4"],["ReconstructedSeededChargedParticles#5 (*)","ReconstructedSeededChargedParticles__pound__5"],["ReconstructedSeededChargedParticles (*)","ReconstructedSeededChargedParticles"],null,["BackwardMPGDEndcapRecHits","BackwardMPGDEndcapRecHits"],["CentralTrackSegments#0","CentralTrackSegments__pound__0"],["CentralTrackingRecHits#0","CentralTrackingRecHits__pound__0"],["EcalBarrelImagingClusterAssociations#0","EcalBarrelImagingClusterAssociations__pound__0"],["EcalBarrelImagingClusterAssociations#1","EcalBarrelImagingClusterAssociations__pound__1"],["EcalBarrelImagingClusterAssociations","EcalBarrelImagingClusterAssociations"],["EcalBarrelImagingClusters#0","EcalBarrelImagingClusters__pound__0"],["EcalBarrelImagingClusters#1","EcalBarrelImagingClusters__pound__1"],["EcalBarrelImagingClusters","EcalBarrelImagingClusters"],["EcalBarrelImagingRawHits","EcalBarrelImagingRawHits"],["EcalBarrelImagingRecHits","EcalBarrelImagingRecHits"],["EcalBarrelScFiRawHits","EcalBarrelScFiRawHits"],["EcalBarrelScFiRecHits","EcalBarrelScFiRecHits"],["EcalBarrelTruthClusterAssociations#0","EcalBarrelTruthClusterAssociations__pound__0"],["EcalBarrelTruthClusterAssociations#1","EcalBarrelTruthClusterAssociations__pound__1"],["EcalBarrelTruthClusterAssociations","EcalBarrelTruthClusterAssociations"],["EcalBarrelTruthClusters#0","EcalBarrelTruthClusters__pound__0"],["EcalBarrelTruthClusters#1","EcalBarrelTruthClusters__pound__1"],["EcalBarrelTruthClusters","EcalBarrelTruthClusters"],["EcalEndcapNClusterAssociations#0","EcalEndcapNClusterAssociations__pound__0"],["EcalEndcapNClusterAssociations#1","EcalEndcapNClusterAssociations__pound__1"],["EcalEndcapNClusterAssociations","EcalEndcapNClusterAssociations"],["EcalEndcapNClusters","EcalEndcapNClusters"],["EcalEndcapNRawHits","EcalEndcapNRawHits"],["EcalEndcapNRecHits","EcalEndcapNRecHits"],["EcalEndcapNTruthClusterAssociations#0","EcalEndcapNTruthClusterAssociations__pound__0"],["EcalEndcapNTruthClusterAssociations#1","EcalEndcapNTruthClusterAssociations__pound__1"],["EcalEndcapNTruthClusterAssociations","EcalEndcapNTruthClusterAssociations"],["EcalEndcapNTruthClusters","EcalEndcapNTruthClusters"],["EcalEndcapPClusterAssociations#0","EcalEndcapPClusterAssociations__pound__0"],["EcalEndcapPClusterAssociations#1","EcalEndcapPClusterAssociations__pound__1"],["EcalEndcapPClusterAssociations","EcalEndcapPClusterAssociations"],["EcalEndcapPClusters","EcalEndcapPClusters"],["EcalEndcapPInsertRawHits","EcalEndcapPInsertRawHits"],["EcalEndcapPRawHits","EcalEndcapPRawHits"],["EcalEndcapPRecHits","EcalEndcapPRecHits"],["EcalEndcapPTruthClusterAssociations#0","EcalEndcapPTruthClusterAssociations__pound__0"],["EcalEndcapPTruthClusterAssociations#1","EcalEndcapPTruthClusterAssociations__pound__1"],["EcalEndcapPTruthClusterAssociations","EcalEndcapPTruthClusterAssociations"],["EcalEndcapPTruthClusters","EcalEndcapPTruthClusters"],["EventHeader","EventHeader"],["ForwardMPGDEndcapRecHits","ForwardMPGDEndcapRecHits"],["GeneratedChargedJets#4","GeneratedChargedJets__pound__4"],["GeneratedChargedJets#5","GeneratedChargedJets__pound__5"],["GeneratedChargedJets","GeneratedChargedJets"],["GeneratedJets#4","GeneratedJets__pound__4"],["GeneratedJets#5","GeneratedJets__pound__5"],["GeneratedJets","GeneratedJets"],["GeneratedParticles#4","GeneratedParticles__pound__4"],["GeneratedParticles#5","GeneratedParticles__pound__5"],["GeneratedParticles","GeneratedParticles"],["HcalBarrelClusterAssociations#0","HcalBarrelClusterAssociations__pound__0"],["HcalBarrelClusterAssociations#1","HcalBarrelClusterAssociations__pound__1"],["HcalBarrelClusterAssociations","HcalBarrelClusterAssociations"],["HcalBarrelClusters","HcalBarrelClusters"],["HcalBarrelRawHits","HcalBarrelRawHits"],["HcalBarrelRecHits","HcalBarrelRecHits"],["HcalBarrelTruthClusterAssociations#0","HcalBarrelTruthClusterAssociations__pound__0"],["HcalBarrelTruthClusterAssociations#1","HcalBarrelTruthClusterAssociations__pound__1"],["HcalBarrelTruthClusterAssociations","HcalBarrelTruthClusterAssociations"],["HcalBarrelTruthClusters","HcalBarrelTruthClusters"],["HcalEndcapNMergedHits","HcalEndcapNMergedHits"],["HcalEndcapNRawHits","HcalEndcapNRawHits"],["HcalEndcapNRecHits","HcalEndcapNRecHits"],["HcalEndcapNTruthClusterAssociations#0","HcalEndcapNTruthClusterAssociations__pound__0"],["HcalEndcapNTruthClusterAssociations#1","HcalEndcapNTruthClusterAssociations__pound__1"],["HcalEndcapNTruthClusterAssociations","HcalEndcapNTruthClusterAssociations"],["HcalEndcapNTruthClusters","HcalEndcapNTruthClusters"],["MCParticles#0","MCParticles__pound__0"],["MCParticles#1","MCParticles__pound__1"],["MCParticles","MCParticles"],["MPGDBarrelRecHits","MPGDBarrelRecHits"],["OuterMPGDBarrelRecHits","OuterMPGDBarrelRecHits"],["ReconstructedChargedParticleAssociations#0","ReconstructedChargedParticleAssociations__pound__0"],["ReconstructedChargedParticleAssociations#1","ReconstructedChargedParticleAssociations__pound__1"],["ReconstructedChargedParticleAssociations","ReconstructedChargedParticleAssociations"],["ReconstructedParticleAssociations#1","ReconstructedParticleAssociations__pound__1"],["ReconstructedParticles#0","ReconstructedParticles__pound__0"],["SiBarrelTrackerRecHits","SiBarrelTrackerRecHits"],["SiBarrelVertexRecHits","SiBarrelVertexRecHits"],["SiEndcapTrackerRecHits","SiEndcapTrackerRecHits"],["TOFBarrelRecHit","TOFBarrelRecHit"],["TOFEndcapRecHits","TOFEndcapRecHits"]]}}],"callbacks":{"type":"map","entries":[["document_ready",[{"type":"object","name":"CustomJS","id":"p61165","attributes":{"code":"\n      var location = window.location.hash.replace(/^#/, \"\");\n      if ((location != \"\") &amp;&amp; ((typeof current_location === 'undefined') || (current_location != location))) {\n        fetch(location + '.json')\n            .then(function(response) { return response.json(); })\n            .then(function(item) { Bokeh.documents[0].replace_with_json(item.doc); })\n        window.current_location = location;\n      }\n    "}}]]]}}}
+    </script>
+    <script type="text/javascript">
+      (function() {
+        const fn = function() {
+          Bokeh.safely(function() {
+            (function(root) {
+              function embed_document(root) {
+              const docs_json = document.getElementById('p61168').textContent;
+              const render_items = [{"docid":"709b11d0-a063-42fd-9af7-970a1deb3df3","roots":{"p61166":"e8bcd416-a882-4dc9-9770-fc7e88b07135"},"root_ids":["p61166"]}];
+              root.Bokeh.embed.embed_items(docs_json, render_items);
+              }
+              if (root.Bokeh !== undefined) {
+                embed_document(root);
+              } else {
+                let attempts = 0;
+                const timer = setInterval(function(root) {
+                  if (root.Bokeh !== undefined) {
+                    clearInterval(timer);
+                    embed_document(root);
+                  } else {
+                    attempts++;
+                    if (attempts > 100) {
+                      clearInterval(timer);
+                      console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                    }
+                  }
+                }, 10, root)
+              }
+            })(window);
+          });
+        };
+        if (document.readyState != "loading") fn();
+        else document.addEventListener("DOMContentLoaded", fn);
+      })();
+    </script>
+  </body>
+</html>
