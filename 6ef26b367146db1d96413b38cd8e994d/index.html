@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ePIC capybara report</title>
+    <style>
+      html, body {
+        box-sizing: border-box;
+        display: flow-root;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-3.4.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        Bokeh.set_log_level("info");
+    </script>
+  </head>
+  <body>
+    <div id="ef8da23a-737e-47b4-95aa-f173e2629270" data-root-id="p14392" style="display: contents;"></div>
+  
+    <script type="application/json" id="b780ac81-9b1a-460b-a556-35850b1b9c59">
+      {"a65bc73f-91b4-45a5-8ffa-ef345c3b94da":{"version":"3.4.1","title":"Bokeh Application","roots":[{"type":"object","name":"Select","id":"p14392","attributes":{"js_property_callbacks":{"type":"map","entries":[["change:value",[{"type":"object","name":"CustomJS","id":"p14393","attributes":{"code":"\n          console.log('dropdown: ' + this.value, this.toString())\n          if (this.value != \"\") {\n            window.location.hash = \"#\" + this.value;\n            fetch(this.value + '.json')\n              .then(function(response) { return response.json(); })\n              .then(function(item) { Bokeh.documents[0].replace_with_json(item.doc); })\n          }\n        "}}]]]},"title":"Select branch (**** &lt; 67% CL, ..., * &gt; 99% CL stat. equiv.):","options":[["",""],["ReconstructedElectronsForDIS","ReconstructedElectronsForDIS (*)"],["_ReconstructedElectronsForDIS_clusters","_ReconstructedElectronsForDIS_clusters (*)"],["_ReconstructedElectronsForDIS_particleIDUsed","_ReconstructedElectronsForDIS_particleIDUsed (*)"],["_ReconstructedElectronsForDIS_particleIDs","_ReconstructedElectronsForDIS_particleIDs (*)"],["_ReconstructedElectronsForDIS_startVertex","_ReconstructedElectronsForDIS_startVertex (*)"],["_ReconstructedElectronsForDIS_tracks","_ReconstructedElectronsForDIS_tracks (*)"],["ReconstructedParticles","ReconstructedParticles (*)"],["_ReconstructedParticles_clusters","_ReconstructedParticles_clusters (*)"],["_ReconstructedParticles_particleIDUsed","_ReconstructedParticles_particleIDUsed (*)"],["_ReconstructedParticles_startVertex","_ReconstructedParticles_startVertex (*)"],["ScatteredElectronsEMinusPz","ScatteredElectronsEMinusPz (*)"],["_ScatteredElectronsEMinusPz_clusters","_ScatteredElectronsEMinusPz_clusters (*)"],["_ScatteredElectronsEMinusPz_particleIDUsed","_ScatteredElectronsEMinusPz_particleIDUsed (*)"],["_ScatteredElectronsEMinusPz_particleIDs","_ScatteredElectronsEMinusPz_particleIDs (*)"],["_ScatteredElectronsEMinusPz_startVertex","_ScatteredElectronsEMinusPz_startVertex (*)"],["_ScatteredElectronsEMinusPz_tracks","_ScatteredElectronsEMinusPz_tracks (*)"],["ReconstructedChargedParticles","ReconstructedChargedParticles"],["_ReconstructedChargedParticles_particleIDUsed","_ReconstructedChargedParticles_particleIDUsed"],["_ReconstructedChargedParticles_particleIDs","_ReconstructedChargedParticles_particleIDs"],["_ReconstructedChargedParticles_startVertex","_ReconstructedChargedParticles_startVertex"],["_ReconstructedChargedParticles_tracks","_ReconstructedChargedParticles_tracks"],["_ReconstructedParticles_particleIDs","_ReconstructedParticles_particleIDs"],["_ReconstructedParticles_tracks","_ReconstructedParticles_tracks"]]}}],"callbacks":{"type":"map","entries":[["document_ready",[{"type":"object","name":"CustomJS","id":"p14391","attributes":{"code":"\n      window.onhashchange = function() {\n        var location = window.location.hash.replace(/^#/, \"\");\n        if ((location != \"\") &amp;&amp; ((typeof current_location === 'undefined') || (current_location != location))) {\n          fetch(location + '.json')\n              .then(function(response) { return response.json(); })\n              .then(function(item) { Bokeh.documents[0].replace_with_json(item.doc); })\n          window.current_location = location;\n        }\n      }\n      window.onhashchange();\n    "}}]]]}}}
+    </script>
+    <script type="text/javascript">
+      (function() {
+        const fn = function() {
+          Bokeh.safely(function() {
+            (function(root) {
+              function embed_document(root) {
+              const docs_json = document.getElementById('b780ac81-9b1a-460b-a556-35850b1b9c59').textContent;
+              const render_items = [{"docid":"a65bc73f-91b4-45a5-8ffa-ef345c3b94da","roots":{"p14392":"ef8da23a-737e-47b4-95aa-f173e2629270"},"root_ids":["p14392"]}];
+              root.Bokeh.embed.embed_items(docs_json, render_items);
+              }
+              if (root.Bokeh !== undefined) {
+                embed_document(root);
+              } else {
+                let attempts = 0;
+                const timer = setInterval(function(root) {
+                  if (root.Bokeh !== undefined) {
+                    clearInterval(timer);
+                    embed_document(root);
+                  } else {
+                    attempts++;
+                    if (attempts > 100) {
+                      clearInterval(timer);
+                      console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                    }
+                  }
+                }, 10, root)
+              }
+            })(window);
+          });
+        };
+        if (document.readyState != "loading") fn();
+        else document.addEventListener("DOMContentLoaded", fn);
+      })();
+    </script>
+  </body>
+</html>
